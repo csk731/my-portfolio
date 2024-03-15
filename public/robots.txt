@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://chaitanyaallu.dev
+
+# Sitemaps
+Sitemap: https://chaitanyaallu.dev/sitemap.xml
