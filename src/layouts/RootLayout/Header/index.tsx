@@ -12,10 +12,10 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
   return (
     <StyledWrapper>
       <div data-full-width={fullWidth} className="container">
-        <Logo />
+        {/* <Logo /> */}
         <div className="nav">
-          <ThemeToggle />
           <NavBar />
+          <ThemeToggle />
         </div>
       </div>
     </StyledWrapper>
@@ -35,8 +35,9 @@ const StyledWrapper = styled.div`
     display: flex;
     padding-left: 1rem;
     padding-right: 1rem;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
     max-width: 1120px;
     height: 3rem;
