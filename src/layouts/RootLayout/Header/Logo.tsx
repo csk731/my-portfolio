@@ -5,7 +5,7 @@ import styled from "@emotion/styled"
 const Logo = () => {
   return (
     <StyledWrapper href="/" aria-label={CONFIG.blog.title}>
-      <strong>{CONFIG.blog.title} 🧑‍💻</strong>
+      {CONFIG.blog.title} 🧑‍💻
     </StyledWrapper>
   )
 }
