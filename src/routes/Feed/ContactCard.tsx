@@ -10,6 +10,16 @@ import { CONFIG } from "site.config"
 import { Emoji } from "src/components/Emoji"
 
 const ContactCard: React.FC = () => {
+  function handleCopyToClipboard(schoolEmail: string): void {
+    navigator.clipboard.writeText(schoolEmail)
+      .then(() => {
+        alert("Email copied to clipboard");
+      })
+      .catch((error) => {
+        console.error("Failed to copy email to clipboard:", error);
+      });
+  }
+
   return (
     <>
       <StyledTitle>
@@ -28,24 +38,26 @@ const ContactCard: React.FC = () => {
         )}
         {CONFIG.profile.personalEmail && (
           <a
-            href={`mailto:${CONFIG.profile.personalEmail}`}
+            // href={`mailto:${CONFIG.profile.personalEmail}`}
             rel="noreferrer"
             target="_blank"
+            onClick={() => handleCopyToClipboard(CONFIG.profile.personalEmail)}
             css={{ overflow: "hidden" }}
           >
             <AiOutlineMail className="icon" />
-            <div className="name">personal-mail</div>
+            <div className="name">{CONFIG.profile.personalEmail}</div>
           </a>
         )}
         {CONFIG.profile.schoolEmail && (
           <a
-            href={`mailto:${CONFIG.profile.schoolEmail}`}
+            // href={`mailto:${CONFIG.profile.schoolEmail}`}
             rel="noreferrer"
             target="_blank"
+            onClick={() => handleCopyToClipboard(CONFIG.profile.schoolEmail)}
             css={{ overflow: "hidden" }}
           >
             <AiOutlineMail className="icon" />
-            <div className="name">school-mail</div>
+            <div className="name">{CONFIG.profile.schoolEmail}</div>
           </a>
         )}
         {CONFIG.profile.linkedin && (

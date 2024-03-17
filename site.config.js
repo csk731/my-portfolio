@@ -19,8 +19,8 @@ const CONFIG = {
   ],
   // blog setting (required)
   blog: {
-    title: "chaitanya's portfolio",
-    description: "welcome to my portfolio!",
+    title: "chaitanya allu",
+    description: "An application which holds my thoughts, credentials, and experience.",
   },
 
   // CONFIG configration (required)
